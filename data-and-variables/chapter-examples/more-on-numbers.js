@@ -1,5 +1,7 @@
-console.log(42000);
-console.log(42,000);
+const input = require('readline-sync');
 
-console.log(42, 17, 56, 34, 11, 4.35, 32);
-console.log(3.4, "hello", 45);
+let degreesC = input.question('Temp in degrees C: ');
+degreesC = Number(degreesC);
+let degreesK = degreesC + 273.15;
+
+console.log('Degrees K:', degreesK);
