@@ -6,7 +6,8 @@ let element1 = ['hydrogen', 'H', 1.008];
 let element2 = ['helium', 'He', 4.003];
 let element26 = ['iron', 'Fe', 55.85];
     
-//2) Define the array 'table', and use 'push' to add each of the element arrays to it. Print 'table' to see its structure.
+//2) Define the array 'table', and use 'push' to add each of the element arrays to it. Print 'table' to see its structure. [1 dimension[2nd dimension[third dimension]]]
+
 
 let table = [
     ['hydrogen', 'H', 1.008],
@@ -14,7 +15,10 @@ let table = [
     ['iron', 'Fe', 55.85]
 ];
 
+table.push(element1, element2, element26)
 console.log(table[0], table[1], table[2]);
+console.log(table)
+console.log(`${table}`);
 
 //3) Use bracket notation to examine the difference between printing 'table' with one index vs. two indices (table[][]).
 
@@ -26,3 +30,16 @@ console.log(table[1][0]);
 console.log(table[2][1]);
 
 //5) 'table' is an example of a 2-dimensional array. The first “level” contains the element arrays, and the second level holds the name/symbol/mass values. Experiment! Create a 3-dimensional array and print out one entry from each level in the array.
+let element15 = [15, 'Phosphorus', 'P', 30.974];
+
+threeDimElementalArray = [
+        ['hydrogen', 'H', 1.008],
+        ['helium', 'He', 4.0026],
+        ['carbon', 'C', 12.011],
+        ['phosphorus', 'P', 30.974],
+],
+
+console.log(threeDimElementalArray[0][2]);
+console.log(threeDimElementalArray[1][1]);
+console.log(threeDimElementalArray[2][0]);
+console.log(threeDimElementalArray[3][2]);
