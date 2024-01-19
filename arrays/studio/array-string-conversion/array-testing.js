@@ -8,18 +8,23 @@ strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
-	let check;
+	let check = string[0];
 	let output;
 	//TODO: 2. write the code required for this step
-
+	if(check.includes(',')){
+		output = check.split(',').reverse().join(',')
+	}
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
 }
+console.log(studio.reverseCommas());
 
 //3)
 function semiDash() {
 	let check;
 	let output;
+	console.log(studio.semiDash());
+
 //TODO: write the code required for this step
 
   
@@ -30,6 +35,8 @@ function semiDash() {
 function reverseSpaces() {
 	let check;
 	let output;
+	console.log(studio.reverseSpaces());
+
   //TODO: write the code required for this step
 
 	return output;
@@ -43,6 +50,7 @@ function commaSpace() {
   
 	return output;
 }
+console.log(studio.commaSpace());
 
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
