@@ -65,6 +65,10 @@ console.log(reversed);
   a. One array contains the even numbers, and the other holds the odds.
   b. Print the arrays to confirm the results. */
   let numArray = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
+let evens = [], odds = [];
+console.log(evens);
+console.log(odds);
+
   for (let i = 0; i < numArray.length - 5; i++) {
    console.log(numArray[i]);
 }
