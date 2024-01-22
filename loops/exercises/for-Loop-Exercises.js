@@ -40,10 +40,14 @@ for (let i = 48; i >= 21; i-=3)
 /*Exercise #2: 
 Initialize two variables to hold the string “LaunchCode” and the array [1, 5, ‘LC101’, ‘blue’, 42].
 
+for (let i = 0; i < array.length; i++) {
+   console.log(array[i]);
+   reversed = array[i] + reversed;
+}
 
 Construct ``for`` loops to accomplish the following tasks:
   a. Print each element of the array to a new line.
-  b. Print each character of the string - in reverse order - to a new line. */ 
+  b. Print each character of the string - in reverse order - to a new line. (git reset - all inside java folder)*/ 
 
 let string = "LauchCode";
 let array = [1, 5, 'LC101', 'blue', 42];
@@ -51,32 +55,29 @@ let array = [1, 5, 'LC101', 'blue', 42];
 for (let i = 0; i < array.length; i++) {
    console.log(array[i]);
 }
-reversed = "";
 
+reversed = ""
 for (let i = 0; i < string.length; i++) {
    reversed = string[i] + reversed;
 }
 
-console.log(reversed);
-
-
+for (let i = 0; i < reversed.length; i++) {
+   console.log(reversed[i]);
+}
 
 /*Exercise #3:Construct a for loop that sorts the array [2, 3, 13, 18, -5, 38, -10, 11, 0, 104] into two new arrays:
   a. One array contains the even numbers, and the other holds the odds.
   b. Print the arrays to confirm the results. */
-  let numArray = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
-let evens = [], odds = [];
+  let otherArr = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
+  let evens = [], odds = [];
+
+for (let i = 0; i < otherArr.length; i++) {
+if (otherArr[i] % 2 !== 0) {
+   odds.push(otherArr[i]);
+} else {
+   evens.push(otherArr[i]);
+}
+}
+
 console.log(evens);
 console.log(odds);
-
-  for (let i = 0; i < numArray.length - 5; i++) {
-   console.log(numArray[i]);
-}
-for (let i = 0; i < array.length - 5; i++) {
-   console.log(array[i]);
-}
-reversed = [];
-
-for (let i = 0; i < numArray.length+5; i++) {
-   console.log(numArray[i]);
-}
