@@ -2,8 +2,8 @@
 const input = require('readline-sync');
 
 let startingFuelLevel = Number(input.question('Enter a starting fuel level: '));
-let astronautsAboard = '';
-let shuttleAltitude = '';
+let astronautsAboard = Number(input.question('Enter the number of astronauts aboard the shuttle: '));
+let altitude = 0;
 
 
 
@@ -20,7 +20,6 @@ while (startingFuelLevel < 5000 || startingFuelLevel > 30000 || isNaN(startingFu
       startingFuelLevel = input.question('Over 30000 not allowed. Reenter a number: ');
    }
 }
-
 console.log(`Fuel level: ${startingFuelLevel}`);
 
 //b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
@@ -33,20 +32,24 @@ while (astronautsAboard > 7 || astronautsAboard < 0 || isNaN(astronautsAboard)) 
       astronautsAboard = input.question('No less than than 0 astronauts allowed. Reenter a number: ');
    }
 }
-
-  console.log(`Astronauts aboard: ${astronautsAboard}`);
+console.log(`Astronauts aboard: ${astronautsAboard}`);
   
 //c. Use a final loop to monitor the fuel status and the altitude of the shuttle. Each iteration, decrease the fuel level by 100 units for each astronaut aboard. Also, increase the altitude by 50 kilometers.
 
-let altitude = 0;
 let currentFuelLevel = startingFuelLevel;
-while (currentFuelLevel = (100 * astronautsAboard) > 0) {
+while (currentFuelLevel - (100 * astronautsAboard) > 0) {
    altitude = altitude + 50;
    currentFuelLevel = currentFuelLevel - (100 * astronautsAboard);
-  //console.log(`***current fuel level: ${currentFuelLevel}, cuurent altitude: ${altitude}`)
 }
+console.log(`***current fuel level: ${currentFuelLevel}, current altitude: ${altitude}`);
 
-console.log
+  //console.log(`***current fuel level: ${currentFuelLevel}, cuurent altitude: ${altitude}`)
+
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”
 
 If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”*/
+if (altitude > 2000) {
+   console.log('Orbit acheived!');
+} else {
+   console.log('Failed to reach orbit.');
+}
