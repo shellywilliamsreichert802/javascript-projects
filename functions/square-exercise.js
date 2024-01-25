@@ -17,21 +17,18 @@
   console.log(makeLine(5));
 
 console.log('---------------');
-
   //function makeSquare(size) {
     //let square = ''
     //("#".repeat(size) + "\\n").repeat(size);
   //}
   //console.log(makeSquare)
-  function makeSquare(num) {
-    let result = "";
-    for (let i = 0; i < num; i++) {
-      for (let j = 0; j < num; j++) {
-        result += "#";
-      }
-      result += "\n";
+  
+  function makeSquare(size) {
+    let square = "";
+    for (let i = 0; i < size; i++) {
+    square += makeLine(size) + '\n';
     }
-    return result;
+    return square;
   }
 console.log(makeSquare(5));
 
@@ -46,5 +43,13 @@ function makeRectangle(width, height) {
   }
   console.log(makeRectangle(5, 3));
 
-  //Now, go back and rewrite makeSquare to use makeRectangle.
-
+  //Now, go back and rewrite makeSquare to use makeRectangle.----does not print when modified to...
+//function makeRectangle(size) {
+  //  let rectangle = "";
+    //for (let i = 0; i < size; i++) {
+    //rectangle += makeLine(size) + '\n';
+    //}
+    //return rectangle;
+  //}
+//console.log(makeRectangle(5));
+  
