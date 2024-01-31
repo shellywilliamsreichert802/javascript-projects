@@ -1,6 +1,8 @@
 function removeI(arr) {
-    if (/* Enter base case test here */){
-      return arr;
+    // if (arr.indexOf('i')===-1){
+      // if (!arr.includes('i')){
+
+    return arr;
     } else {
       arr.splice(arr.indexOf('i'),1);
       return removeI(arr);

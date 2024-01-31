@@ -12,4 +12,22 @@ b) Replace any strings with “ARRR!”
 c) Print the new array to confirm your work.
 */
 
+let tripleAndReplace = function(myArr) {
+    if (typeof myArr === 'number') {
+        return myArr * 3;
+    } else if (typeof myArr === 'string') {
+        return "ARRR!"
+    } else {
+        return myArr;
+    }
+}
 let arr = ['Elocution', 21, 'Clean teeth', 100];
+
+arr = arr.map((element) => {
+    return tripleAndReplace(element);
+});   
+    console.log(arr);
+  
+
+
+
