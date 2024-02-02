@@ -21,4 +21,4 @@ function decreasingSum(integer){
   } else {
     //ANSWER
     return integer + decreasingSum(integer - 1);}
-  }}
+  }

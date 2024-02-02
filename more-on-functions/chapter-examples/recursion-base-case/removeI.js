@@ -1,13 +1,13 @@
-function removeI(arr) {
-    // if (arr.indexOf('i')===-1){
-      // if (!arr.includes('i')){
+// function removeI(arr) {
+// if (arr.indexOf('i')===-1){
+if (!arr.includes('i')){
 
     return arr;
     } else {
       arr.splice(arr.indexOf('i'),1);
       return removeI(arr);
     }
-};
+;
 
 let arrayToChange = ['One', 'i', 'c', 'X', 'i', 'i', 54];
 
