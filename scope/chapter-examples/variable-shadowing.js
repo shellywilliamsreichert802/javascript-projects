@@ -15,4 +15,6 @@ let name = input.question("Please enter your name: ");
 
 hello(name);
 doubleName(name);
+console.log(hello(name));
+console.log(doubleName(name));
 console.log(name);
