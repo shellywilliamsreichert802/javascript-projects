@@ -1,5 +1,7 @@
 //Declare a class called CrewCandidate with a constructor that takes three parameters—name, mass, and scores. Note that scores will be an array of test results.
 
+///***Define a class named CrewCandidate
+
 class CrewCandidate {
     constructor(name, mass, scores){
       this.name = name;
@@ -7,9 +9,21 @@ class CrewCandidate {
       this.scores = (scores);
 
     }
- }
+  
+ //Add methods for adding scores, averaging scores and determining candidate status as described in the studio activity.
+
+  /// ***Define an addScore method outside of the constructor
+ addScore(newScore) {
+
+  // CrewCandidate.addNewScore.addScore = function(newScore) {
+      // Use the push method to add the new score to the scores array
+
+  ///*** Use the push array method to add the score to this.scores
+      this.scores.push(newScore);
+    }
+  }
  
- 
+///***Create instances of crewCandiates
  let bear = new CrewCandidate('Bubba Bear', 135, [88, 85, 90]);
  let maltese = new CrewCandidate('Merry Maltese', 1.5, [93, 88, 97]); 
  let gator = new CrewCandidate('Glad Gator', 225, [75, 78, 62]);
@@ -18,14 +32,9 @@ class CrewCandidate {
  console.log(maltese)
  console.log(gator);
 
-
-
-//Add methods for adding scores, averaging scores and determining candidate status as described in the studio activity.
-
-CrewCandidate.addNewScore.addScore = function(newScore) {
-    // Use the push method to add the new score to the scores array
-    this.scores.push(newScore);
-  }
+ ///***test addScore method by adding 83 score to bear and print new score array 
+bear.addScore(83);
+console.log(bear.scores);
 // class Manuel extends Book {
 // 	constructor(title, author, copyright, isbn, pages, timesCheckedOut, discarded) {
 //         super(title, author, copyright, isbn, pages, timesCheckedOut, discarded);
