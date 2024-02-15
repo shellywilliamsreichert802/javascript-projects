@@ -18,6 +18,6 @@ class Tiger extends Panthera {
 	}
 }
 
-let tigger = new Tiger();
+let tiger = new Tiger();
 
-console.log(tigger);
+console.log(tiger);
