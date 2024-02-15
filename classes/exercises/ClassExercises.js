@@ -9,8 +9,10 @@ class Book {
       this.timesCheckedOut = timesCheckedOut;
       this.discarded = discarded
     }
- }
- 
+    checkout(uses = 1) {
+        this.timesCheckedOut += uses;
+    }
+}
  // Define your Manual and Novel classes here:
 
 class Manuel extends Book {
