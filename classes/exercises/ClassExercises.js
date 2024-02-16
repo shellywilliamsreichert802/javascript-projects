@@ -39,13 +39,24 @@ class Novel extends Book {
 
  // Declare the objects for exercises 2 and 3 here:
 
-let goodRead = new Novel('Pride and Prejudice', 'Jane Austen', 1813, 1111111111111, 432, 32, 'No')
+let novelBook = new Novel('Pride and Prejudice', 'Jane Austen', 1813, 1111111111111, 432, 32, 'No');
 
-let makingTheShip = new Manuel('Top Scret Shuttle Building Materials', 'Redacted', 2013, 0000000000000, 1147, 1, 'No');
+let manualBook = new Manuel('Top Scret Shuttle Building Materials', 'Redacted', 2013, 0000000000000, 1147, 1, 'No');
 
 // Code exercises 4 & 5 here:
 // makingTheShip.checkout();
 // makingTheShip.dispose('Yes');
+console.log(novelBook);
+console.log(manualBook);
 
-goodRead.checkout(5);
-goodRead.dispose();
+manualBook.dispose(2024);
+novelBook.dispose();
+
+console.log(novelBook);
+console.log(manualBook);
+
+manualBook.checkout(5);
+novelBook.checkout(5);
+
+console.log(novelBook);
+console.log(manualBook);

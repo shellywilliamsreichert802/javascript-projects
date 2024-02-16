@@ -1,4 +1,7 @@
 //Try adding new properties inside constructor.
+
+
+
 class Astronaut {
    constructor(name, age, mass, height){
      this.name = name;
@@ -24,4 +27,7 @@ console.log(fox.age, fox.color);
 console.log(typeof hippo, typeof fox);
 console.log (hippo, fox)
 
-//Try modifying or adding properties below.
+
+
+//Try modifying or adding properties below
+console.log(fox.reportStats == hippo.reportStats);
