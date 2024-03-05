@@ -1,11 +1,85 @@
 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Search Form</title>
+</head>
+<body>
+    <form id="searchForm">
+        <input type="text" name="q" placeholder="Search...">
+        <label>
+            <input type="radio" name="engine" value="google">
+            Google
+        </label>
+        <label>
+            <input type="radio" name="engine" value="duckduckgo">
+            DuckDuckGo
+        </label>
+        <label>
+            <input type="radio" name="engine" value="bing">
+            Bing
+        </label>
+        <label>
+            <input type="radio" name="engine" value="ask">
+            Ask
+        </label>
+        <button type="submit">Go!</button>
+    </form>
+	<script>
+        // Get a reference to the form -->
+        <!-- const searchForm = document.getElementById('searchForm'); -->
 
+        <!-- // Register an event listener for form submission
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the selected search engine
+            const selectedEngine = document.querySelector('input[name="engine"]:checked');
+            if (selectedEngine) {
+                const engineName = selectedEngine.value;
+                const query = document.querySelector('input[name="q"]').value;
+				                // Perform the search based on the selected engine and query
+								switch (engineName) {
+                    case 'google':
+                        window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                        break;
+                    case 'duckduckgo':
+                        window.location.href = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
+                        break;
+                    case 'bing':
+                        window.location.href = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+                        break;
+                    case 'ask':
+                        window.location.href = `https://www.ask.com/web?q=${encodeURIComponent(query)}`;
+                        break;
+                    default:
+                        console.log('Invalid search engine selection.');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- 
 <head>
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
-    window.addEventListener("load", function(){
+		function setSearchEngine() {
+			let actions = {
+				google: "https://www.google.com/search",
+				duckDuckGo: "https://www.duckduckgo.com/",
+				bing: "https://www.bing.com/search",
+				ask: "https://www.ask.com/web"
+			}	
+			let form = document.querySelector("#searchForm");
+			let engine = document.querySelector("#input[name=engine]:checked");
+
+			form.setAttribute("action", actions[engine.value])
+		}
+    	window.addEventListener("load", function(){
         // TODO: register the handler
+			document.querySelector("#searchForm").addEventListener("submit", setSearchEngine)
     });
 	</script>
 </head>
@@ -13,7 +87,22 @@
 <body>
 
 	<form id="searchForm">
-    <!-- TODO: add form elements -->
+    < TODO: add form elements -->
+	<!-- <input type="text" name="q">
+	<label><input type="radio" name="engine" value="google"> Google</label>
+	<label><input type="radio" name="engine" value="google"> Google</label>
+	<label><input type="radio" name="engine" value="google"> Google</label>
+	<label><input type="radio" name="engine" value="google"> Google</label>
+	<button value="Go">Go!</button>
 	</form>
 
 </body>
+
+
+
+
+
+
+
+
+
